@@ -1,3 +1,1 @@
-module.exports = {
-  preset: 'react-native',
-};
+export const preset = 'react-native';
