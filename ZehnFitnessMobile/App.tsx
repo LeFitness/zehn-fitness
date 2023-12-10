@@ -4,23 +4,23 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function Home(): React.JSX.Element {
+const Home = (): React.JSX.Element => {
   return (
     <View>
       <Text style={styles.textTitle}>Home</Text>
     </View>
   );
-}
+};
 
-function Details(): React.JSX.Element {
+const Details = (): React.JSX.Element => {
   return (
     <View>
       <Text style={styles.textTitle}>Details Screen</Text>
     </View>
   );
-}
+};
 
-function App(): React.JSX.Element {
+const App = (): React.JSX.Element => {
   const Stack = createNativeStackNavigator();
 
   return (
@@ -31,7 +31,7 @@ function App(): React.JSX.Element {
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
 
 const styles = StyleSheet.create({
   textTitle: {
