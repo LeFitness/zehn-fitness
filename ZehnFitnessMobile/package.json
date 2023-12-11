@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
+    "axios": "^1.6.2",
     "eslint-plugin-formatjs": "^4.11.3",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-no-relative-import-paths": "^1.5.3",
