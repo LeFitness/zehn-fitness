@@ -1,13 +1,23 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const handleOnPress = () => {
+  console.log('Button pressed');
+};
 
 const Home = (): React.JSX.Element => {
   return (
     <View>
       <Text style={styles.textTitle}>Home</Text>
+      <Pressable onPress={handleOnPress}>
+        <View style={{ backgroundColor: 'blue' }}>
+          <Text style={{ color: 'white' }}>Pressable Text</Text>
+        </View>
+      </Pressable>
+      {/* <Button onPress={handleOnPress} title="Button Text" /> */}
     </View>
   );
 };
