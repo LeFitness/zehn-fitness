@@ -1,4 +1,4 @@
-export const project = {
+module.exports = {
   ios: {
     automaticPodsInstallation: true,
   },
