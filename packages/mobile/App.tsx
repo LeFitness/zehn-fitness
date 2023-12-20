@@ -1,7 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import testFunction from '@common/components/testFunction';
 import { mobileFunction } from '@mobile/mobileFunction';
@@ -35,23 +33,20 @@ const Details = (): React.JSX.Element => {
 };
 
 const App = (): React.JSX.Element => {
-  const Stack = createNativeStackNavigator();
+  const RootStack = createNativeStackNavigator<RootStackParamList>();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
+      <RootStack.Navigator initialRouteName="Index">
+        <RootStack.Screen name={'Index'} component={Index} />
+        <RootStack.Screen
+          name={'CreateWorkout'}
+          component={CreateWorkout}
+          initialParams={{ testProp: 'poop' }}
+        />
+      </RootStack.Navigator>
     </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  textTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-});
 
 export default App;
