@@ -3,9 +3,13 @@ import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import testFunction from '@common/components/testFunction';
+import { mobileFunction } from '@mobile/mobileFunction';
 
 const handleOnPress = () => {
   console.log('Button pressed');
+  testFunction();
+  mobileFunction();
 };
 
 const Home = (): React.JSX.Element => {
