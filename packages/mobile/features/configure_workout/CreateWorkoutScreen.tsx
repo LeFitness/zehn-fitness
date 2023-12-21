@@ -1,18 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import ConfigureWorkout from './ConfigureWorkout';
-
-const styles = StyleSheet.create({
-  textTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-});
+import { View } from 'react-native';
+import ConfigureWorkout from '@mobile/features/configure_workout/ConfigureWorkout';
 
 export default function CreateWorkoutScreen(): React.JSX.Element {
   return (
     <View>
-      <Text style={styles.textTitle}></Text>
       <ConfigureWorkout />
     </View>
   );
