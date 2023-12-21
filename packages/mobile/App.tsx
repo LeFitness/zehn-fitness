@@ -1,57 +1,21 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import testFunction from '@common/components/testFunction';
-import { mobileFunction } from '@mobile/mobileFunction';
-
-const handleOnPress = () => {
-  console.log('Button pressed');
-  testFunction();
-  mobileFunction();
-};
-
-const Home = (): React.JSX.Element => {
-  return (
-    <View>
-      <Text style={styles.textTitle}>Home</Text>
-      <Pressable onPress={handleOnPress}>
-        <View style={{ backgroundColor: 'blue' }}>
-          <Text style={{ color: 'white' }}>Pressable Text</Text>
-        </View>
-      </Pressable>
-      {/* <Button onPress={handleOnPress} title="Button Text" /> */}
-    </View>
-  );
-};
-
-const Details = (): React.JSX.Element => {
-  return (
-    <View>
-      <Text style={styles.textTitle}>Details Screen</Text>
-    </View>
-  );
-};
+import Index from '@mobile/features/index/IndexScreen';
+import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
+import CreateWorkout from '@mobile/features/configure_workout/CreateWorkoutScreen';
 
 const App = (): React.JSX.Element => {
-  const Stack = createNativeStackNavigator();
+  const RootStack = createNativeStackNavigator<RootStackParamList>();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
+      <RootStack.Navigator initialRouteName="Index">
+        <RootStack.Screen name={'Index'} component={Index} />
+        <RootStack.Screen name={'CreateWorkout'} component={CreateWorkout} />
+      </RootStack.Navigator>
     </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  textTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-});
 
 export default App;
