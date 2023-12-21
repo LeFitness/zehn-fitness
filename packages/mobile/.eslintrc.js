@@ -25,6 +25,12 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'react', 'import'],
+  ignorePatterns: [
+    'metro.config.js',
+    'babel.config.js',
+    'jest.config.js',
+    'react-native.config.js',
+  ],
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
