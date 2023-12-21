@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, View } from 'react-native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
 import i18nString, { Messages } from '@common/i18n';
+import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 type IndexNavigationProp = NativeStackNavigationProp<
   RootStackParamList,

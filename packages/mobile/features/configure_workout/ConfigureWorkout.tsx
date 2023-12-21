@@ -1,6 +1,6 @@
-import i18nString, { Messages } from '@common/i18n';
 import React, { useState } from 'react';
 import { View, TextInput } from 'react-native';
+import i18nString, { Messages } from '@common/i18n';
 
 function ConfigureWorkout() {
   const [workoutName, setWorkoutName] = useState('');
