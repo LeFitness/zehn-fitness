@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, View } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/NavigationConstants';
+import i18nString, { Messages } from '@common/i18n';
 
 type IndexNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -19,7 +20,10 @@ function IndexScreen({ navigation }: IndexScreenProps): React.JSX.Element {
 
   return (
     <View>
-      <Button onPress={handleOnPress} />
+      <Button
+        onPress={handleOnPress}
+        title={i18nString(Messages.CreateWorkout)}
+      />
     </View>
   );
 }

@@ -3,14 +3,14 @@ enum Languages {
   Spanish,
 }
 
-enum Keys {
+export enum Messages {
   CreateWorkout = "CreateWorkout",
   EnterWorkoutName = "EnterWorkoutName",
   WorkoutSuccessfullyCreated = "WorkoutSuccessfullyCreated",
 }
 
 type i18nLanguage = {
-  [key in Keys]: string;
+  [key in Messages]: string;
 };
 
 const en: i18nLanguage = {
@@ -25,11 +25,11 @@ const es: i18nLanguage = {
   WorkoutSuccessfullyCreated: "¡Entrenamiento creado con éxito!",
 };
 
-export default function i18n(key: keyof Keys): string {
+export default function i18nString(key: Messages): string {
   const curLang: Languages = Languages.English;
   let language: i18nLanguage;
   switch (curLang) {
-    // @ts-ignore: eventually curLang will not be hardcoded
+    // @ts-ignore: eventually curLang will not be hardcoded to english
     case Languages.Spanish:
       language = es;
       break;
@@ -38,5 +38,6 @@ export default function i18n(key: keyof Keys): string {
       language = en;
       break;
   }
+
   return language[key];
 }
