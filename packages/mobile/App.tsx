@@ -38,11 +38,10 @@ const App = (): React.JSX.Element => {
   return (
     <NavigationContainer>
       <RootStack.Navigator initialRouteName="Index">
-        <RootStack.Screen name={'Index'} component={Index} />
+        <RootStack.Screen name={'Index'} component={IndexScreen} />
         <RootStack.Screen
           name={'CreateWorkout'}
-          component={CreateWorkout}
-          initialParams={{ testProp: 'poop' }}
+          component={CreateWorkoutScreen}
         />
       </RootStack.Navigator>
     </NavigationContainer>
