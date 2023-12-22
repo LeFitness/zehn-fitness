@@ -10,7 +10,7 @@ type IndexNavigationProp = NativeStackNavigationProp<
   'Index'
 >;
 
-interface IndexScreenProps {
+export interface IndexScreenProps {
   navigation: IndexNavigationProp;
 }
 

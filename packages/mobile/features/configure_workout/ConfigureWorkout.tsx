@@ -1,10 +1,25 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button } from 'react-native';
+import { View, TextInput, Button, StyleSheet } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
+import { IndexScreenProps } from '@mobile/features/index/IndexScreen';
 import useBoundStore from '@mobile/stores/useBoundStore';
 import { workoutSlice } from '@mobile/stores/workoutSlice';
 
-function ConfigureWorkout() {
+const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+});
+
+function ConfigureWorkout({ navigation }: IndexScreenProps) {
   const [workoutName, setWorkoutName] = useState('');
   const setCurrentWorkout = workoutSlice(state => state.startWorkout);
 
@@ -16,14 +31,25 @@ function ConfigureWorkout() {
     setCurrentWorkout({ id: 1, name: workoutName });
   };
 
+  const handleOnPress = () => {
+    navigation.navigate('ExerciseList');
+  };
+
   return (
     <View>
       <TextInput
         placeholder={i18nString(Messages.EnterWorkoutName)}
         value={workoutName}
         onChangeText={handleWorkoutNameChange}
+        style={styles.input}
       />
-      <Button title="Start Workout" onPress={startWorkout} />
+      <View style={styles.row}>
+        <Button
+          onPress={handleOnPress}
+          title={i18nString(Messages.ExerciseList)}
+        />
+        <Button title="Start Workout" onPress={startWorkout} />
+      </View>
     </View>
   );
 }
