@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, Button } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
 
-function ConfigureWorkout() {
+type OnSaveWorkout = (workoutName: string) => void;
+
+interface ConfigureWorkoutProps {
+  onSaveWorkout: OnSaveWorkout;
+}
+
+function ConfigureWorkout({ onSaveWorkout }: ConfigureWorkoutProps) {
   const [workoutName, setWorkoutName] = useState('');
 
   const handleWorkoutNameChange = (text: string) => {
     setWorkoutName(text);
+  };
+
+  const onSavePress = () => {
+    onSaveWorkout(workoutName);
   };
 
   return (
@@ -16,6 +26,7 @@ function ConfigureWorkout() {
         value={workoutName}
         onChangeText={handleWorkoutNameChange}
       />
+      <Button onPress={onSavePress} title={i18nString(Messages.Save)} />
     </View>
   );
 }

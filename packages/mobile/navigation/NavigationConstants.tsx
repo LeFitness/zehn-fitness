@@ -1,4 +1,5 @@
 export type RootStackParamList = {
-  Index: undefined;
-  CreateWorkout: undefined;
+  IndexScreen: undefined;
+  CreateWorkoutScreen: undefined;
+  WorkoutsListScreen: undefined;
 };

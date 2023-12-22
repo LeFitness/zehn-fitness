@@ -4,25 +4,25 @@ import i18nString, { Messages } from '@common/i18n';
 import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-type IndexNavigationProp = NativeStackNavigationProp<
+type NavigationProp = NativeStackNavigationProp<
   RootStackParamList,
-  'Index'
+  'IndexScreen'
 >;
 
-interface IndexScreenProps {
-  navigation: IndexNavigationProp;
+interface ScreenProps {
+  navigation: NavigationProp;
 }
 
-function IndexScreen({ navigation }: IndexScreenProps): React.JSX.Element {
-  const handleOnPress = () => {
-    navigation.navigate('CreateWorkout');
-  };
-
+function IndexScreen({ navigation }: ScreenProps): React.JSX.Element {
   return (
     <View>
       <Button
-        onPress={handleOnPress}
+        onPress={() => navigation.navigate('CreateWorkoutScreen')}
         title={i18nString(Messages.CreateWorkout)}
+      />
+      <Button
+        onPress={() => navigation.navigate('WorkoutsListScreen')}
+        title={i18nString(Messages.MyWorkouts)}
       />
     </View>
   );
