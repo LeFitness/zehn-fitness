@@ -1,11 +1,11 @@
-import { create } from 'zustand';
+import { StateCreator } from 'zustand';
 
 interface Exercise {
   id: number;
   name: string;
 }
 
-export interface WorkoutStore {
+export interface WorkoutSlice {
   currentWorkout: Exercise | null;
   completedWorkouts: Exercise[];
   exercises: Exercise[];
@@ -14,7 +14,7 @@ export interface WorkoutStore {
   resetWorkout: () => void;
 }
 
-export const workoutSlice = create<WorkoutStore>()(set => ({
+export const createWorkoutSlice: StateCreator<WorkoutSlice, [], [], WorkoutSlice> = (set => ({
   currentWorkout: null,
   completedWorkouts: [],
   exercises: [

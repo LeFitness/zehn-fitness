@@ -3,7 +3,6 @@ import { View, TextInput, Button, StyleSheet } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
 import { IndexScreenProps } from '@mobile/features/index/IndexScreen';
 import useBoundStore from '@mobile/stores/useBoundStore';
-import { workoutSlice } from '@mobile/stores/workoutSlice';
 
 const styles = StyleSheet.create({
   row: {
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
 
 function ConfigureWorkout({ navigation }: IndexScreenProps) {
   const [workoutName, setWorkoutName] = useState('');
-  const setCurrentWorkout = workoutSlice(state => state.startWorkout);
+  const setCurrentWorkout = useBoundStore(state => state.startWorkout);
 
   const handleWorkoutNameChange = (text: string) => {
     setWorkoutName(text);
