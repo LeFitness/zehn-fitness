@@ -1,8 +1,8 @@
-import { createWorkoutSlice, WorkoutSlice } from '@mobile/stores/WorkoutSlice';
+import { createWorkoutSlice, WorkoutSlice } from '@mobile/stores/workoutSlice';
 import { create } from 'zustand';
 
 // other slice types will go here as a union type
-type AppSlice = WorkoutSlice
+type AppSlice = WorkoutSlice;
 
 const useBoundStore = create<AppSlice>()((...a) => ({
   ...createWorkoutSlice(...a),
