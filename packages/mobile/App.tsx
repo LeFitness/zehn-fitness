@@ -3,13 +3,13 @@ import CreateWorkout from '@mobile/features/configure_workout/CreateWorkoutScree
 import ExerciseList from '@mobile/features/configure_workout/ExerciseList';
 import Index from '@mobile/features/index/IndexScreen';
 import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
-import { workoutSlice } from '@mobile/stores/workoutSlice';
+import useBoundStore from '@mobile/stores/useBoundStore';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const App = (): React.JSX.Element => {
   const RootStack = createNativeStackNavigator<RootStackParamList>();
-  const currentWorkout = workoutSlice(state => state.currentWorkout);
+  const currentWorkout = useBoundStore(state => state.currentWorkout);
 
   return (
     <NavigationContainer>

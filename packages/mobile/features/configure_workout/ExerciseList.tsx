@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-import { workoutSlice } from '@mobile/stores/workoutSlice';
+import useBoundStore from '@mobile/stores/useBoundStore';
 
 const styles = StyleSheet.create({
   container: {
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 });
 
 const ExerciseList = () => {
-  const exercises = workoutSlice(state => state.exercises);
+  const exercises = useBoundStore(state => state.exercises);
   return (
     <View style={styles.container}>
       <FlatList

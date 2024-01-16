@@ -1,12 +1,11 @@
-import { workoutSlice, WorkoutStore } from '@mobile/stores/workoutSlice';
+import { createWorkoutSlice, WorkoutSlice } from '@mobile/stores/workoutSlice';
 import { create } from 'zustand';
 
-export interface StoreState {
-  workoutSlice: WorkoutStore;
-}
+// other slice types will go here as a union type
+type AppSlice = WorkoutSlice;
 
-const useBoundStore = create<StoreState>(set => ({
-  workoutSlice: workoutSlice(set),
+const useBoundStore = create<AppSlice>()((...a) => ({
+  ...createWorkoutSlice(...a),
 }));
 
 export default useBoundStore;
