@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, View } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
-import ActiveWorkout from '@mobile/features/configure_workout/ActiveWorkout';
+import ActiveWorkout from '@mobile/features/index/ActiveWorkout';
 import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 

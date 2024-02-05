@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
-import { IndexScreenProps } from '@mobile/features/index/IndexScreen';
+import { CreateWorkoutScreenProps } from '@mobile/features/configure_workout/CreateWorkoutScreen';
 import useBoundStore from '@mobile/stores/useBoundStore';
 
 const styles = StyleSheet.create({
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function ConfigureWorkout({ navigation }: IndexScreenProps) {
+function ConfigureWorkout({ navigation }: CreateWorkoutScreenProps) {
   const [workoutName, setWorkoutName] = useState('');
   const setCurrentWorkout = useBoundStore(state => state.startWorkout);
 
