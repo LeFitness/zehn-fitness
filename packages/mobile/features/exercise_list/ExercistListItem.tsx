@@ -8,11 +8,13 @@ const styles = StyleSheet.create({
   },
 });
 
-interface ExerciseListItem {
+interface ExerciseListItemProps {
   name: string;
 }
 
-const ExerciseListItem = ({ name }: ExerciseListItem) => {
+const ExerciseListItem = ({
+  name,
+}: ExerciseListItemProps): React.JSX.Element => {
   return <Text style={styles.item}>{name}</Text>;
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import { Button } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
 import type { RootStackParamList } from '@mobile/navigation/NavigationConstants';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -23,13 +23,13 @@ const IndexScreen = ({ navigation }: IndexScreenProps): React.JSX.Element => {
   };
 
   return (
-    <View>
+    <>
       <Button onPress={navigateToHome} title={i18nString(Messages.Home)} />
       <Button
         onPress={navigateToCreateWorkout}
         title={i18nString(Messages.CreateWorkout)}
       />
-    </View>
+    </>
   );
 };
 

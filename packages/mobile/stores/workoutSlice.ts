@@ -6,7 +6,7 @@ export interface Exercise {
 }
 
 export interface WorkoutSlice {
-  currentWorkout: Exercise | null;
+  currentWorkout: Exercise | undefined;
   completedWorkouts: Exercise[];
   exercises: Exercise[];
   startWorkout: (exercise: Exercise) => void;
@@ -20,7 +20,7 @@ export const createWorkoutSlice: StateCreator<
   [],
   WorkoutSlice
 > = set => ({
-  currentWorkout: null,
+  currentWorkout: undefined,
   completedWorkouts: [],
   exercises: [
     { id: 1, name: 'Bench Press' },
@@ -33,11 +33,11 @@ export const createWorkoutSlice: StateCreator<
       if (state.currentWorkout) {
         return {
           completedWorkouts: [...state.completedWorkouts, state.currentWorkout],
-          currentWorkout: null,
+          currentWorkout: undefined,
         };
       }
 
       return state;
     }),
-  resetWorkout: () => set({ currentWorkout: null }),
+  resetWorkout: () => set({ currentWorkout: undefined }),
 });

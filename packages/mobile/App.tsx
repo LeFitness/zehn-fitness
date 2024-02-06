@@ -1,6 +1,6 @@
 import React from 'react';
 import CreateWorkout from '@mobile/features/configure_workout/CreateWorkoutScreen';
-import ExerciseList from '@mobile/features/configure_workout/exercise_list/ExerciseListScreen';
+import ExerciseList from '@mobile/features/exercise_list/ExerciseListScreen';
 import Home from '@mobile/features/home/HomeScreen';
 import Index from '@mobile/features/index/IndexScreen';
 import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
@@ -16,7 +16,7 @@ const App = (): React.JSX.Element => {
     <NavigationContainer>
       <RootStack.Navigator initialRouteName="Index">
         <RootStack.Screen
-          name={'Index'}
+          name="Index"
           component={Index}
           options={{
             title: currentWorkout?.name,
@@ -29,9 +29,9 @@ const App = (): React.JSX.Element => {
             },
           }}
         />
-        <RootStack.Screen name={'Home'} component={Home} />
-        <RootStack.Screen name={'CreateWorkout'} component={CreateWorkout} />
-        <RootStack.Screen name={'ExerciseList'} component={ExerciseList} />
+        <RootStack.Screen name="Home" component={Home} />
+        <RootStack.Screen name="CreateWorkout" component={CreateWorkout} />
+        <RootStack.Screen name="ExerciseList" component={ExerciseList} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

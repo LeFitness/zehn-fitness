@@ -25,7 +25,7 @@ interface ConfigureWorkoutProps {
 const ConfigureWorkout = ({
   navigation,
   setCurrentWorkout,
-}: ConfigureWorkoutProps) => {
+}: ConfigureWorkoutProps): React.JSX.Element => {
   const [workoutName, setWorkoutName] = useState('');
 
   const handleWorkoutNameChange = (text: string) => {
