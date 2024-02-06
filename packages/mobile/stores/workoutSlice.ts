@@ -1,9 +1,5 @@
+import type { Exercise } from '@mobile/types/exercises';
 import { StateCreator } from 'zustand';
-
-export interface Exercise {
-  id: number;
-  name: string;
-}
 
 export interface WorkoutSlice {
   currentWorkout: Exercise | undefined;

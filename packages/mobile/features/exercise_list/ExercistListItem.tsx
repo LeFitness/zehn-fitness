@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
+import type { Exercise } from '@mobile/types/exercises';
 
 const styles = StyleSheet.create({
   item: {
@@ -9,13 +10,13 @@ const styles = StyleSheet.create({
 });
 
 interface ExerciseListItemProps {
-  name: string;
+  exercise: Exercise;
 }
 
 const ExerciseListItem = ({
-  name,
+  exercise,
 }: ExerciseListItemProps): React.JSX.Element => {
-  return <Text style={styles.item}>{name}</Text>;
+  return <Text style={styles.item}>{exercise.name}</Text>;
 };
 
 export default ExerciseListItem;

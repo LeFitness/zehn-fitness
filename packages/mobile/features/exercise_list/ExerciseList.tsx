@@ -8,7 +8,7 @@ const ExerciseList = ({ exercises }: ExercisesProps): React.JSX.Element => {
   return (
     <FlatList
       data={exercises}
-      renderItem={({ item }) => <ExerciseListItem name={item.name} />}
+      renderItem={({ item }) => <ExerciseListItem exercise={item} />}
     />
   );
 };

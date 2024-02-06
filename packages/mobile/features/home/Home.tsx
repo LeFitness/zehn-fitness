@@ -1,7 +1,7 @@
 import React from 'react';
 import ActiveWorkout from '@mobile/features/home/ActiveWorkout';
 import useAppStore from '@mobile/stores/useAppStore';
-import type { Exercise } from '@mobile/stores/workoutSlice';
+import type { Exercise } from '@mobile/types/exercises';
 
 interface HomeProps {
   currentWorkout?: Exercise;

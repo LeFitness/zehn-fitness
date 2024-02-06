@@ -1,7 +1,6 @@
-import { Exercise } from '@mobile/stores/workoutSlice';
-
-export interface CurrentWorkoutProps {
-  currentWorkout?: Exercise;
+export interface Exercise {
+  id: number;
+  name: string;
 }
 
 export interface ExercisesProps {
