@@ -1,15 +1,16 @@
 import React from 'react';
 import CreateWorkout from '@mobile/features/configure_workout/CreateWorkoutScreen';
-import ExerciseList from '@mobile/features/configure_workout/ExerciseList';
+import ExerciseList from '@mobile/features/configure_workout/exercise_list/ExerciseListScreen';
+import Home from '@mobile/features/home/HomeScreen';
 import Index from '@mobile/features/index/IndexScreen';
 import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
-import useBoundStore from '@mobile/stores/useBoundStore';
+import useAppStore from '@mobile/stores/useAppStore';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const App = (): React.JSX.Element => {
   const RootStack = createNativeStackNavigator<RootStackParamList>();
-  const currentWorkout = useBoundStore(state => state.currentWorkout);
+  const currentWorkout = useAppStore(state => state.currentWorkout);
 
   return (
     <NavigationContainer>
@@ -28,6 +29,7 @@ const App = (): React.JSX.Element => {
             },
           }}
         />
+        <RootStack.Screen name={'Home'} component={Home} />
         <RootStack.Screen name={'CreateWorkout'} component={CreateWorkout} />
         <RootStack.Screen name={'ExerciseList'} component={ExerciseList} />
       </RootStack.Navigator>

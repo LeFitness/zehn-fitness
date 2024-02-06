@@ -4,6 +4,7 @@ enum Languages {
 }
 
 export enum Messages {
+  Home = "Home",
   CreateWorkout = "CreateWorkout",
   EnterWorkoutName = "EnterWorkoutName",
   WorkoutSuccessfullyCreated = "WorkoutSuccessfullyCreated",
@@ -15,6 +16,7 @@ type i18nLanguage = {
 };
 
 const en: i18nLanguage = {
+  Home: "Home",
   CreateWorkout: "Create Workout",
   EnterWorkoutName: "Enter workout name",
   WorkoutSuccessfullyCreated: "Workout successfully created!",
@@ -22,6 +24,7 @@ const en: i18nLanguage = {
 };
 
 const es: i18nLanguage = {
+  Home: "Hogar",
   CreateWorkout: "Crear Entrenamiento",
   EnterWorkoutName: "Ingrese el nombre del entrenamiento",
   WorkoutSuccessfullyCreated: "¡Entrenamiento creado con éxito!",

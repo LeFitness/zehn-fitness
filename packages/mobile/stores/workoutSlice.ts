@@ -1,6 +1,6 @@
 import { StateCreator } from 'zustand';
 
-interface Exercise {
+export interface Exercise {
   id: number;
   name: string;
 }
@@ -14,7 +14,12 @@ export interface WorkoutSlice {
   resetWorkout: () => void;
 }
 
-export const createWorkoutSlice: StateCreator<WorkoutSlice, [], [], WorkoutSlice> = (set => ({
+export const createWorkoutSlice: StateCreator<
+  WorkoutSlice,
+  [],
+  [],
+  WorkoutSlice
+> = set => ({
   currentWorkout: null,
   completedWorkouts: [],
   exercises: [
@@ -35,4 +40,4 @@ export const createWorkoutSlice: StateCreator<WorkoutSlice, [], [], WorkoutSlice
       return state;
     }),
   resetWorkout: () => set({ currentWorkout: null }),
-}));
+});
