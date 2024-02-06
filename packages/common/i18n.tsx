@@ -7,6 +7,7 @@ export enum Messages {
   CreateWorkout = "CreateWorkout",
   EnterWorkoutName = "EnterWorkoutName",
   WorkoutSuccessfullyCreated = "WorkoutSuccessfullyCreated",
+  ExerciseList = "ExerciseList",
 }
 
 type i18nLanguage = {
@@ -17,12 +18,14 @@ const en: i18nLanguage = {
   CreateWorkout: "Create Workout",
   EnterWorkoutName: "Enter workout name",
   WorkoutSuccessfullyCreated: "Workout successfully created!",
+  ExerciseList: "Exercise List",
 };
 
 const es: i18nLanguage = {
   CreateWorkout: "Crear Entrenamiento",
   EnterWorkoutName: "Ingrese el nombre del entrenamiento",
   WorkoutSuccessfullyCreated: "¡Entrenamiento creado con éxito!",
+  ExerciseList: "Lista de ejercicios",
 };
 
 export default function i18nString(key: Messages): string {

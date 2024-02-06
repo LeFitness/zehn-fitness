@@ -11,7 +11,7 @@ const config = {
   watchFolders: [path.join(__dirname, '..')],
   resolver: {
     unstable_enableSymlinks: true,
-    unstable_enablePackageExports: true,
+    unstable_enablePackageExports: false,
   },
 };
 
