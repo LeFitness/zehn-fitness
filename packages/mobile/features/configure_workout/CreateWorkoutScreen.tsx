@@ -1,6 +1,6 @@
 import React from 'react';
 import ConfigureWorkout from '@mobile/features/configure_workout/ConfigureWorkout';
-import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
+import type { RootStackParamList } from '@mobile/navigation/NavigationConstants';
 import useAppStore from '@mobile/stores/useAppStore';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
