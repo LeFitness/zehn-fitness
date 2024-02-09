@@ -2,7 +2,11 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import ExerciseListItem from '@mobile/features/exercise_list/ExercistListItem';
 import useAppStore from '@mobile/stores/useAppStore';
-import type { ExercisesProps } from '@mobile/types/exercises';
+import type { Exercise } from '@mobile/types/exercises';
+
+interface ExercisesProps {
+  exercises: Exercise[];
+}
 
 const ExerciseList = ({ exercises }: ExercisesProps): React.JSX.Element => {
   return (
