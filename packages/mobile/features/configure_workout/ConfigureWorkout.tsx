@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
+import { colors } from '@mobile/theme/colors';
 import type { Exercise } from '@mobile/types/exercises';
 
 const styles = StyleSheet.create({
@@ -42,7 +43,11 @@ const ConfigureWorkout = ({
         style={styles.input}
       />
       <View style={styles.row}>
-        <Button title="Start Workout" onPress={startWorkout} />
+        <Button
+          title="Start Workout"
+          onPress={startWorkout}
+          color={colors.palette.primary}
+        />
       </View>
     </>
   );
