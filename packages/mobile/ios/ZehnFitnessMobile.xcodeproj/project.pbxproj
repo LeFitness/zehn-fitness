@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* ZehnFitnessMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ZehnFitnessMobileTests.m */; };
+		05785C54D541F365DB12E670 /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA343B1BFDFE8EF87189D8C /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7BD5694BD0A2BCD11A6BF45C /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2938ADD800058F1FC7A69AF3 /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C4CE81D24CC73882B24D43BE /* libPods-ZehnFitnessMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A07196C7C155C6DCCC951E8B /* libPods-ZehnFitnessMobile.a */; };
+		C38D64699DF2EF71FD7D1D10 /* libPods-ZehnFitnessMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C07E832A2B5D66CEED9C836 /* libPods-ZehnFitnessMobile.a */; };
+		CA7E67F02B7AB72800E715DE /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67EF2B7AB72800E715DE /* Zocial.ttf */; };
+		CA7E68042B7AB75F00E715DE /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F12B7AB75F00E715DE /* FontAwesome5_Regular.ttf */; };
+		CA7E68052B7AB75F00E715DE /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F22B7AB75F00E715DE /* FontAwesome5_Brands.ttf */; };
+		CA7E68062B7AB75F00E715DE /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F32B7AB75F00E715DE /* Foundation.ttf */; };
+		CA7E68072B7AB75F00E715DE /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F42B7AB75F00E715DE /* Octicons.ttf */; };
+		CA7E68082B7AB75F00E715DE /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F52B7AB75F00E715DE /* Ionicons.ttf */; };
+		CA7E68092B7AB75F00E715DE /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F62B7AB75F00E715DE /* Feather.ttf */; };
+		CA7E680A2B7AB75F00E715DE /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F72B7AB75F00E715DE /* Zocial.ttf */; };
+		CA7E680B2B7AB75F00E715DE /* FontAwesome6_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F82B7AB75F00E715DE /* FontAwesome6_Regular.ttf */; };
+		CA7E680C2B7AB75F00E715DE /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67F92B7AB75F00E715DE /* AntDesign.ttf */; };
+		CA7E680D2B7AB75F00E715DE /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67FA2B7AB75F00E715DE /* EvilIcons.ttf */; };
+		CA7E680E2B7AB75F00E715DE /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67FB2B7AB75F00E715DE /* Fontisto.ttf */; };
+		CA7E680F2B7AB76000E715DE /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67FC2B7AB75F00E715DE /* MaterialCommunityIcons.ttf */; };
+		CA7E68102B7AB76000E715DE /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67FD2B7AB75F00E715DE /* FontAwesome.ttf */; };
+		CA7E68112B7AB76000E715DE /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67FE2B7AB75F00E715DE /* MaterialIcons.ttf */; };
+		CA7E68122B7AB76000E715DE /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E67FF2B7AB75F00E715DE /* FontAwesome6_Brands.ttf */; };
+		CA7E68132B7AB76000E715DE /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E68002B7AB75F00E715DE /* SimpleLineIcons.ttf */; };
+		CA7E68142B7AB76000E715DE /* FontAwesome6_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E68012B7AB75F00E715DE /* FontAwesome6_Solid.ttf */; };
+		CA7E68152B7AB76000E715DE /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E68022B7AB75F00E715DE /* FontAwesome5_Solid.ttf */; };
+		CA7E68162B7AB76000E715DE /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E68032B7AB75F00E715DE /* Entypo.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +50,39 @@
 		00E356EE1AD99517003FC87E /* ZehnFitnessMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZehnFitnessMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ZehnFitnessMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZehnFitnessMobileTests.m; sourceTree = "<group>"; };
-		065867DCA1B7CF03C3FC2C1C /* Pods-ZehnFitnessMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZehnFitnessMobile.release.xcconfig"; path = "Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ZehnFitnessMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZehnFitnessMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ZehnFitnessMobile/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ZehnFitnessMobile/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ZehnFitnessMobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ZehnFitnessMobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ZehnFitnessMobile/main.m; sourceTree = "<group>"; };
-		1B583432CCDB0B2F3E2B9890 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2938ADD800058F1FC7A69AF3 /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36ACAAB7C859B0C0DB60E712 /* Pods-ZehnFitnessMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZehnFitnessMobile.debug.xcconfig"; path = "Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		1527E4CA17B6B35D9674B07A /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		398C1F09A0814ECA6E8F6B62 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig"; path = "Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		6BA343B1BFDFE8EF87189D8C /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ZehnFitnessMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A07196C7C155C6DCCC951E8B /* libPods-ZehnFitnessMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZehnFitnessMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1533F486673E32A8FC8B8D5 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig"; path = "Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		9684D0FBF861D66376EA1BBD /* Pods-ZehnFitnessMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZehnFitnessMobile.release.xcconfig"; path = "Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile.release.xcconfig"; sourceTree = "<group>"; };
+		9C07E832A2B5D66CEED9C836 /* libPods-ZehnFitnessMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZehnFitnessMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7E67EF2B7AB72800E715DE /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		CA7E67F12B7AB75F00E715DE /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		CA7E67F22B7AB75F00E715DE /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		CA7E67F32B7AB75F00E715DE /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		CA7E67F42B7AB75F00E715DE /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		CA7E67F52B7AB75F00E715DE /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		CA7E67F62B7AB75F00E715DE /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		CA7E67F72B7AB75F00E715DE /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		CA7E67F82B7AB75F00E715DE /* FontAwesome6_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome6_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Regular.ttf"; sourceTree = "<group>"; };
+		CA7E67F92B7AB75F00E715DE /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		CA7E67FA2B7AB75F00E715DE /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		CA7E67FB2B7AB75F00E715DE /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		CA7E67FC2B7AB75F00E715DE /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		CA7E67FD2B7AB75F00E715DE /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		CA7E67FE2B7AB75F00E715DE /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		CA7E67FF2B7AB75F00E715DE /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome6_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf"; sourceTree = "<group>"; };
+		CA7E68002B7AB75F00E715DE /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		CA7E68012B7AB75F00E715DE /* FontAwesome6_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome6_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf"; sourceTree = "<group>"; };
+		CA7E68022B7AB75F00E715DE /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		CA7E68032B7AB75F00E715DE /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		D694AA29C5C909ED10E54F97 /* Pods-ZehnFitnessMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZehnFitnessMobile.debug.xcconfig"; path = "Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD5694BD0A2BCD11A6BF45C /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a in Frameworks */,
+				05785C54D541F365DB12E670 /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4CE81D24CC73882B24D43BE /* libPods-ZehnFitnessMobile.a in Frameworks */,
+				C38D64699DF2EF71FD7D1D10 /* libPods-ZehnFitnessMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +126,7 @@
 		13B07FAE1A68108700A75B9A /* ZehnFitnessMobile */ = {
 			isa = PBXGroup;
 			children = (
+				CA7E67EE2B7AB6BA00E715DE /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -100,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				A07196C7C155C6DCCC951E8B /* libPods-ZehnFitnessMobile.a */,
-				2938ADD800058F1FC7A69AF3 /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a */,
+				9C07E832A2B5D66CEED9C836 /* libPods-ZehnFitnessMobile.a */,
+				6BA343B1BFDFE8EF87189D8C /* libPods-ZehnFitnessMobile-ZehnFitnessMobileTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,12 +181,39 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				36ACAAB7C859B0C0DB60E712 /* Pods-ZehnFitnessMobile.debug.xcconfig */,
-				065867DCA1B7CF03C3FC2C1C /* Pods-ZehnFitnessMobile.release.xcconfig */,
-				1B583432CCDB0B2F3E2B9890 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig */,
-				D1533F486673E32A8FC8B8D5 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig */,
+				D694AA29C5C909ED10E54F97 /* Pods-ZehnFitnessMobile.debug.xcconfig */,
+				9684D0FBF861D66376EA1BBD /* Pods-ZehnFitnessMobile.release.xcconfig */,
+				1527E4CA17B6B35D9674B07A /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig */,
+				398C1F09A0814ECA6E8F6B62 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA7E67EE2B7AB6BA00E715DE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E67F92B7AB75F00E715DE /* AntDesign.ttf */,
+				CA7E68032B7AB75F00E715DE /* Entypo.ttf */,
+				CA7E67FA2B7AB75F00E715DE /* EvilIcons.ttf */,
+				CA7E67F62B7AB75F00E715DE /* Feather.ttf */,
+				CA7E67FD2B7AB75F00E715DE /* FontAwesome.ttf */,
+				CA7E67F22B7AB75F00E715DE /* FontAwesome5_Brands.ttf */,
+				CA7E67F12B7AB75F00E715DE /* FontAwesome5_Regular.ttf */,
+				CA7E68022B7AB75F00E715DE /* FontAwesome5_Solid.ttf */,
+				CA7E67FF2B7AB75F00E715DE /* FontAwesome6_Brands.ttf */,
+				CA7E67F82B7AB75F00E715DE /* FontAwesome6_Regular.ttf */,
+				CA7E68012B7AB75F00E715DE /* FontAwesome6_Solid.ttf */,
+				CA7E67FB2B7AB75F00E715DE /* Fontisto.ttf */,
+				CA7E67F32B7AB75F00E715DE /* Foundation.ttf */,
+				CA7E67F52B7AB75F00E715DE /* Ionicons.ttf */,
+				CA7E67FC2B7AB75F00E715DE /* MaterialCommunityIcons.ttf */,
+				CA7E67FE2B7AB75F00E715DE /* MaterialIcons.ttf */,
+				CA7E67F42B7AB75F00E715DE /* Octicons.ttf */,
+				CA7E68002B7AB75F00E715DE /* SimpleLineIcons.ttf */,
+				CA7E67F72B7AB75F00E715DE /* Zocial.ttf */,
+				CA7E67EF2B7AB72800E715DE /* Zocial.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,12 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ZehnFitnessMobileTests" */;
 			buildPhases = (
-				A778EC6E22D58AE88A6AAD64 /* [CP] Check Pods Manifest.lock */,
+				77EA6D39A655870C44B50DD7 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				AD9C944C7B17D74522D20BA5 /* [CP] Embed Pods Frameworks */,
-				DB7DDFB8450990DE277E5995 /* [CP] Copy Pods Resources */,
+				BF5FB4403B7B957487ACBC06 /* [CP] Embed Pods Frameworks */,
+				B29C532BDBF4F5D78082C181 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,13 +244,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ZehnFitnessMobile" */;
 			buildPhases = (
-				3BA8EE1B092AA3E2A62C9FB3 /* [CP] Check Pods Manifest.lock */,
+				984A7582AD9BFC97A284BF42 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				613B3815A70EF88753E2F8C2 /* [CP] Embed Pods Frameworks */,
-				51079D22C0ED04DE3E47A073 /* [CP] Copy Pods Resources */,
+				4AC010A74BA7CB0D69158502 /* [CP] Embed Pods Frameworks */,
+				B4318983876EE4477CCAD00C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,8 +309,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7E68152B7AB76000E715DE /* FontAwesome5_Solid.ttf in Resources */,
+				CA7E68162B7AB76000E715DE /* Entypo.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				CA7E680F2B7AB76000E715DE /* MaterialCommunityIcons.ttf in Resources */,
+				CA7E680B2B7AB75F00E715DE /* FontAwesome6_Regular.ttf in Resources */,
+				CA7E68102B7AB76000E715DE /* FontAwesome.ttf in Resources */,
+				CA7E67F02B7AB72800E715DE /* Zocial.ttf in Resources */,
+				CA7E680A2B7AB75F00E715DE /* Zocial.ttf in Resources */,
+				CA7E68082B7AB75F00E715DE /* Ionicons.ttf in Resources */,
+				CA7E68042B7AB75F00E715DE /* FontAwesome5_Regular.ttf in Resources */,
+				CA7E680E2B7AB75F00E715DE /* Fontisto.ttf in Resources */,
+				CA7E680C2B7AB75F00E715DE /* AntDesign.ttf in Resources */,
+				CA7E680D2B7AB75F00E715DE /* EvilIcons.ttf in Resources */,
+				CA7E68132B7AB76000E715DE /* SimpleLineIcons.ttf in Resources */,
+				CA7E68112B7AB76000E715DE /* MaterialIcons.ttf in Resources */,
+				CA7E68072B7AB75F00E715DE /* Octicons.ttf in Resources */,
+				CA7E68142B7AB76000E715DE /* FontAwesome6_Solid.ttf in Resources */,
+				CA7E68062B7AB75F00E715DE /* Foundation.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CA7E68052B7AB75F00E715DE /* FontAwesome5_Brands.ttf in Resources */,
+				CA7E68122B7AB76000E715DE /* FontAwesome6_Brands.ttf in Resources */,
+				CA7E68092B7AB75F00E715DE /* Feather.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,46 +353,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		3BA8EE1B092AA3E2A62C9FB3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZehnFitnessMobile-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		51079D22C0ED04DE3E47A073 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		613B3815A70EF88753E2F8C2 /* [CP] Embed Pods Frameworks */ = {
+		4AC010A74BA7CB0D69158502 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,7 +370,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A778EC6E22D58AE88A6AAD64 /* [CP] Check Pods Manifest.lock */ = {
+		77EA6D39A655870C44B50DD7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,24 +392,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AD9C944C7B17D74522D20BA5 /* [CP] Embed Pods Frameworks */ = {
+		984A7582AD9BFC97A284BF42 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZehnFitnessMobile-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB7DDFB8450990DE277E5995 /* [CP] Copy Pods Resources */ = {
+		B29C532BDBF4F5D78082C181 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -375,6 +429,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4318983876EE4477CCAD00C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile/Pods-ZehnFitnessMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF5FB4403B7B957487ACBC06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests/Pods-ZehnFitnessMobile-ZehnFitnessMobileTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -410,7 +498,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B583432CCDB0B2F3E2B9890 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig */;
+			baseConfigurationReference = 1527E4CA17B6B35D9674B07A /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -437,7 +525,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1533F486673E32A8FC8B8D5 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig */;
+			baseConfigurationReference = 398C1F09A0814ECA6E8F6B62 /* Pods-ZehnFitnessMobile-ZehnFitnessMobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -461,7 +549,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36ACAAB7C859B0C0DB60E712 /* Pods-ZehnFitnessMobile.debug.xcconfig */;
+			baseConfigurationReference = D694AA29C5C909ED10E54F97 /* Pods-ZehnFitnessMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -488,7 +576,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 065867DCA1B7CF03C3FC2C1C /* Pods-ZehnFitnessMobile.release.xcconfig */;
+			baseConfigurationReference = 9684D0FBF861D66376EA1BBD /* Pods-ZehnFitnessMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
