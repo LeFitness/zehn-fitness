@@ -1,10 +1,11 @@
 import { StateCreator } from 'zustand';
 
 export interface AuthenticationSlice {
-  email: string;
+  email: string | undefined;
   authToken: string | undefined;
   setEmail: (email: string) => void;
   setAuthToken: (authToken: string) => void;
+  resetAuth: () => void;
 }
 
 export const createAuthenticationSlice: StateCreator<
@@ -14,8 +15,8 @@ export const createAuthenticationSlice: StateCreator<
   AuthenticationSlice
 > = set => ({
   email: 'admin@fitness.dev',
-  // Temporarily setting this to have a default auth token
-  authToken: '123456789',
+  authToken: undefined,
   setEmail: (email: string) => set({ email }),
   setAuthToken: (authToken: string) => set({ authToken }),
+  resetAuth: () => set({ email: undefined, authToken: undefined }),
 });
