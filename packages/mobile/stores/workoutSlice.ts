@@ -1,12 +1,8 @@
+import type { Exercise } from '@mobile/types/exercises';
 import { StateCreator } from 'zustand';
 
-interface Exercise {
-  id: number;
-  name: string;
-}
-
 export interface WorkoutSlice {
-  currentWorkout: Exercise | null;
+  currentWorkout: Exercise | undefined;
   completedWorkouts: Exercise[];
   exercises: Exercise[];
   startWorkout: (exercise: Exercise) => void;
@@ -14,8 +10,13 @@ export interface WorkoutSlice {
   resetWorkout: () => void;
 }
 
-export const createWorkoutSlice: StateCreator<WorkoutSlice, [], [], WorkoutSlice> = (set => ({
-  currentWorkout: null,
+export const createWorkoutSlice: StateCreator<
+  WorkoutSlice,
+  [],
+  [],
+  WorkoutSlice
+> = set => ({
+  currentWorkout: undefined,
   completedWorkouts: [],
   exercises: [
     { id: 1, name: 'Bench Press' },
@@ -28,11 +29,11 @@ export const createWorkoutSlice: StateCreator<WorkoutSlice, [], [], WorkoutSlice
       if (state.currentWorkout) {
         return {
           completedWorkouts: [...state.completedWorkouts, state.currentWorkout],
-          currentWorkout: null,
+          currentWorkout: undefined,
         };
       }
 
       return state;
     }),
-  resetWorkout: () => set({ currentWorkout: null }),
-}));
+  resetWorkout: () => set({ currentWorkout: undefined }),
+});

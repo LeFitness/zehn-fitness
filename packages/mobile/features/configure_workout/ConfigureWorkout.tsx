@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
-import { CreateWorkoutScreenProps } from '@mobile/features/configure_workout/CreateWorkoutScreen';
-import useBoundStore from '@mobile/stores/useBoundStore';
+import type { CreateWorkoutNavigationProp } from '@mobile/features/configure_workout/CreateWorkoutScreen';
+import type { Exercise } from '@mobile/types/exercises';
 
 const styles = StyleSheet.create({
   row: {
@@ -11,16 +11,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   input: {
-    height: 40,
     margin: 12,
     borderWidth: 1,
     padding: 10,
   },
 });
 
-function ConfigureWorkout({ navigation }: CreateWorkoutScreenProps) {
+interface ConfigureWorkoutProps {
+  navigation: CreateWorkoutNavigationProp;
+  setCurrentWorkout: (exercise: Exercise) => void;
+}
+
+const ConfigureWorkout = ({
+  navigation,
+  setCurrentWorkout,
+}: ConfigureWorkoutProps): React.JSX.Element => {
   const [workoutName, setWorkoutName] = useState('');
-  const setCurrentWorkout = useBoundStore(state => state.startWorkout);
 
   const handleWorkoutNameChange = (text: string) => {
     setWorkoutName(text);
@@ -51,6 +57,6 @@ function ConfigureWorkout({ navigation }: CreateWorkoutScreenProps) {
       </View>
     </View>
   );
-}
+};
 
 export default ConfigureWorkout;

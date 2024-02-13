@@ -4,8 +4,8 @@ import { create } from 'zustand';
 // other slice types will go here as a union type
 type AppSlice = WorkoutSlice;
 
-const useBoundStore = create<AppSlice>()((...a) => ({
+const useAppStore = create<AppSlice>()((...a) => ({
   ...createWorkoutSlice(...a),
 }));
 
-export default useBoundStore;
+export default useAppStore;
