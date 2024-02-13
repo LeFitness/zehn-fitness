@@ -2,16 +2,18 @@ import React from 'react';
 import CreateWorkout from '@mobile/features/configure_workout/CreateWorkoutScreen';
 import ExerciseList from '@mobile/features/exercise_list/ExerciseListScreen';
 import Home from '@mobile/features/home/HomeScreen';
-import { RootStackParamList } from '@mobile/navigation/NavigationConstants';
+import Profile from '@mobile/features/profile/ProfileScreen';
+import { BottomTabsStackList } from '@mobile/navigation/NavigationConstants';
 import { colors } from '@mobile/theme/colors';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const BottomTabs = (): React.JSX.Element => {
-  const NavStack = createBottomTabNavigator<RootStackParamList>();
+  const NavStack = createBottomTabNavigator<BottomTabsStackList>();
 
   return (
     <NavStack.Navigator
+      initialRouteName="Home"
       screenOptions={{
         tabBarStyle: { backgroundColor: colors.palette.secondary },
         headerStyle: { backgroundColor: colors.palette.secondary },
@@ -48,6 +50,20 @@ const BottomTabs = (): React.JSX.Element => {
           tabBarIcon: () => (
             <Icon
               name="barbell-outline"
+              size={24}
+              color={colors.palette.primary}
+            />
+          ),
+          tabBarLabelStyle: { color: colors.palette.primary },
+        }}
+      />
+      <NavStack.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarIcon: () => (
+            <Icon
+              name="person-outline"
               size={24}
               color={colors.palette.primary}
             />
