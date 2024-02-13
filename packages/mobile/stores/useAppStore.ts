@@ -1,11 +1,13 @@
+import {
+  createAuthenticationSlice,
+  AuthenticationSlice,
+} from '@mobile/stores/authenticationSlice';
 import { createWorkoutSlice, WorkoutSlice } from '@mobile/stores/workoutSlice';
 import { create } from 'zustand';
 
-// other slice types will go here as a union type
-type AppSlice = WorkoutSlice;
-
-const useAppStore = create<AppSlice>()((...a) => ({
+const useAppStore = create<WorkoutSlice & AuthenticationSlice>()((...a) => ({
   ...createWorkoutSlice(...a),
+  ...createAuthenticationSlice(...a),
 }));
 
 export default useAppStore;
