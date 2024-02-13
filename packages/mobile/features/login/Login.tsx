@@ -35,11 +35,11 @@ const Login = ({ navigation, setAuthToken }: LoginProps): React.JSX.Element => {
     setAuthToken('123456789');
   };
 
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleUsernameChange = (text: string) => {
-    setUsername(text);
+  const handleEmailChange = (text: string) => {
+    setEmail(text);
   };
 
   const handlePasswordChange = (text: string) => {
@@ -51,10 +51,11 @@ const Login = ({ navigation, setAuthToken }: LoginProps): React.JSX.Element => {
       <View style={styles.login}>
         <Text style={styles.banner}>{i18nString(Messages.Welcome)}</Text>
         <TextInput
-          placeholder={i18nString(Messages.Username)}
-          value={username}
-          onChangeText={handleUsernameChange}
+          placeholder={i18nString(Messages.Email)}
+          value={email}
+          onChangeText={handleEmailChange}
           style={styles.input}
+          inputMode="email"
         />
         <TextInput
           placeholder={i18nString(Messages.Password)}
