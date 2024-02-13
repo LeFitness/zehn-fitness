@@ -41,7 +41,7 @@ const ConfigureWorkout = ({
   };
 
   return (
-    <>
+    <View>
       <TextInput
         placeholder={i18nString(Messages.EnterWorkoutName)}
         value={workoutName}
@@ -55,7 +55,7 @@ const ConfigureWorkout = ({
         />
         <Button title="Start Workout" onPress={startWorkout} />
       </View>
-    </>
+    </View>
   );
 };
 
