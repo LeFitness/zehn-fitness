@@ -14,6 +14,7 @@ export enum Messages {
   Password = "Password",
   Login = "Login",
   SignOut = "SignOut",
+  Welcome = "Welcome",
 }
 
 type i18nLanguage = {
@@ -31,6 +32,7 @@ const en: i18nLanguage = {
   Password: "Password",
   Login: "Login",
   SignOut: "Sign out",
+  Welcome: "Welcome",
 };
 
 const es: i18nLanguage = {
@@ -44,6 +46,7 @@ const es: i18nLanguage = {
   Password: "Contraseña",
   Login: "Acceso",
   SignOut: "Sign out",
+  Welcome: "Bienvenido",
 };
 
 export default function i18nString(key: Messages): string {

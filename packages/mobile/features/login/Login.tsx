@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import { Button, View, StyleSheet, TextInput } from 'react-native';
+import { Button, View, StyleSheet, TextInput, Text } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
 import { LoginNavigationProp } from '@mobile/features/login/LoginScreen';
 import useAppStore from '@mobile/stores/useAppStore';
+import { colors } from '@mobile/theme/colors';
 
 const styles = StyleSheet.create({
-  root: {
+  banner: {
+    marginBottom: 20,
+    color: colors.palette.primary,
+    textAlign: 'center',
+    fontSize: 30,
+  },
+  login: {
     display: 'flex',
     justifyContent: 'center',
     height: '100%',
@@ -40,20 +47,23 @@ const Login = ({ navigation, setAuthToken }: LoginProps): React.JSX.Element => {
   };
 
   return (
-    <View style={styles.root}>
-      <TextInput
-        placeholder={i18nString(Messages.Username)}
-        value={username}
-        onChangeText={handleUsernameChange}
-        style={styles.input}
-      />
-      <TextInput
-        placeholder={i18nString(Messages.Password)}
-        value={password}
-        onChangeText={handlePasswordChange}
-        style={styles.input}
-      />
-      <Button onPress={handleLogin} title={i18nString(Messages.Login)} />
+    <View>
+      <View style={styles.login}>
+        <Text style={styles.banner}>{i18nString(Messages.Welcome)}</Text>
+        <TextInput
+          placeholder={i18nString(Messages.Username)}
+          value={username}
+          onChangeText={handleUsernameChange}
+          style={styles.input}
+        />
+        <TextInput
+          placeholder={i18nString(Messages.Password)}
+          value={password}
+          onChangeText={handlePasswordChange}
+          style={styles.input}
+        />
+        <Button onPress={handleLogin} title={i18nString(Messages.Login)} />
+      </View>
     </View>
   );
 };
