@@ -8,7 +8,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const App = (): React.JSX.Element => {
   const RootStack = createNativeStackNavigator<RootStackParamList>();
-
   const isAuthenticated = useAppStore().authToken;
 
   return (
