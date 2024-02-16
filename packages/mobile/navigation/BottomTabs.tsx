@@ -17,16 +17,14 @@ const BottomTabs = (): React.JSX.Element => {
       screenOptions={{
         tabBarStyle: { backgroundColor: colors.palette.secondary },
         headerStyle: { backgroundColor: colors.palette.secondary },
-        headerTitleStyle: { color: colors.palette.primary },
+        headerTitleStyle: { color: colors.white },
       }}>
       <NavStack.Screen
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: () => (
-            <Icon name="home" size={24} color={colors.palette.primary} />
-          ),
-          tabBarLabelStyle: { color: colors.palette.primary },
+          tabBarIcon: () => <Icon name="home" size={24} color={colors.white} />,
+          tabBarLabelStyle: { color: colors.white },
         }}
       />
       <NavStack.Screen
@@ -36,9 +34,9 @@ const BottomTabs = (): React.JSX.Element => {
           tabBarLabel: 'Create Workout',
           headerTitle: 'Create Workout',
           tabBarIcon: () => (
-            <Icon name="add-outline" size={30} color={colors.palette.primary} />
+            <Icon name="add-outline" size={30} color={colors.white} />
           ),
-          tabBarLabelStyle: { color: colors.palette.primary },
+          tabBarLabelStyle: { color: colors.white },
         }}
       />
       <NavStack.Screen
@@ -48,13 +46,9 @@ const BottomTabs = (): React.JSX.Element => {
           tabBarLabel: 'Exercise List',
           headerTitle: 'Exercise List',
           tabBarIcon: () => (
-            <Icon
-              name="barbell-outline"
-              size={24}
-              color={colors.palette.primary}
-            />
+            <Icon name="barbell-outline" size={24} color={colors.white} />
           ),
-          tabBarLabelStyle: { color: colors.palette.primary },
+          tabBarLabelStyle: { color: colors.white },
         }}
       />
       <NavStack.Screen
@@ -62,13 +56,9 @@ const BottomTabs = (): React.JSX.Element => {
         component={Profile}
         options={{
           tabBarIcon: () => (
-            <Icon
-              name="person-outline"
-              size={24}
-              color={colors.palette.primary}
-            />
+            <Icon name="person-outline" size={24} color={colors.white} />
           ),
-          tabBarLabelStyle: { color: colors.palette.primary },
+          tabBarLabelStyle: { color: colors.white },
         }}
       />
     </NavStack.Navigator>

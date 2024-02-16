@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
-import { colors } from '@mobile/theme/colors';
+import Button from '@mobile/common/button/Button';
+import TextInput from '@mobile/common/textinput/TextInput';
 import type { Exercise } from '@mobile/types/exercises';
 
 const styles = StyleSheet.create({
@@ -9,11 +10,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-  },
-  input: {
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
   },
 });
 
@@ -40,14 +36,11 @@ const ConfigureWorkout = ({
         placeholder={i18nString(Messages.EnterWorkoutName)}
         value={workoutName}
         onChangeText={handleWorkoutNameChange}
-        style={styles.input}
       />
       <View style={styles.row}>
-        <Button
-          title="Start Workout"
-          onPress={startWorkout}
-          color={colors.palette.primary}
-        />
+        <Button onPress={startWorkout}>
+          {i18nString(Messages.StartWorkout)}
+        </Button>
       </View>
     </View>
   );

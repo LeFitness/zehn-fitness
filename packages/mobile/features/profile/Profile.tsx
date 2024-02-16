@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import i18nString, { Messages } from '@common/i18n';
+import Button from '@mobile/common/button/Button';
 import { ProfileNavigationProp } from '@mobile/features/profile/ProfileScreen';
 import useAppStore from '@mobile/stores/useAppStore';
 
@@ -28,7 +29,7 @@ const Profile = ({
 
   return (
     <View style={styles.root}>
-      <Button onPress={handleLogout} title={i18nString(Messages.SignOut)} />
+      <Button onPress={handleLogout}>{i18nString(Messages.SignOut)}</Button>
     </View>
   );
 };
