@@ -10,6 +10,15 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 4,
     elevation: 3,
+    borderWidth: 1,
+  },
+  primary: {
+    backgroundColor: colors.primary,
+    borderColor: colors.secondary,
+  },
+  secondary: {
+    backgroundColor: colors.secondary,
+    borderColor: colors.primary,
   },
 });
 
@@ -27,10 +36,17 @@ const Button = ({
 }: ButtonProps): React.JSX.Element => {
   return (
     <Pressable
-      style={{
-        ...styles.button,
-        backgroundColor: type === 'primary' ? colors.primary : colors.secondary,
-      }}
+      style={
+        type === 'primary'
+          ? {
+              ...styles.button,
+              ...styles.primary,
+            }
+          : {
+              ...styles.button,
+              ...styles.secondary,
+            }
+      }
       onPress={onPress}
       {...props}>
       <Text type="primary">{children}</Text>

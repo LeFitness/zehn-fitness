@@ -33,6 +33,7 @@ module.exports = {
   ],
   rules: {
     indent: ['error', 2],
+    offsetTernaryExpressions: true,
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
