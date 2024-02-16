@@ -16,14 +16,11 @@ const styles = StyleSheet.create({
 
 // Set up navigation here for future use
 interface ProfileProps {
-  navigation: ProfileNavigationProp;
+  navigation?: ProfileNavigationProp;
   resetAuth: () => void;
 }
 
-const Profile = ({
-  navigation,
-  resetAuth,
-}: ProfileProps): React.JSX.Element => {
+const Profile = ({ resetAuth }: ProfileProps): React.JSX.Element => {
   const handleLogout = () => {
     resetAuth();
   };

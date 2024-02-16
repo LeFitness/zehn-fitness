@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
 
 // Set up navigation here for future use
 interface LoginProps {
-  navigation: LoginNavigationProp;
+  navigation?: LoginNavigationProp;
   setAuthToken: (authToken: string) => void;
 }
 
-const Login = ({ navigation, setAuthToken }: LoginProps): React.JSX.Element => {
+const Login = ({ setAuthToken }: LoginProps): React.JSX.Element => {
   const handleLogin = () => {
     setAuthToken('123456789');
   };
