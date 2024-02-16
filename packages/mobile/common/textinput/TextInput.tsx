@@ -9,7 +9,6 @@ import { colors } from '@mobile/theme/colors';
 
 const styles = StyleSheet.create({
   textInput: {
-    margin: 12,
     borderWidth: 1,
     padding: 10,
     color: colors.white,

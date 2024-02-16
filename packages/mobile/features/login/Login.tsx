@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: '100%',
   },
+  loginField: {
+    margin: 12,
+    gap: 12,
+  },
   banner: {
     marginBottom: 20,
     textAlign: 'center',
@@ -45,18 +49,20 @@ const Login = ({ navigation, setAuthToken }: LoginProps): React.JSX.Element => {
   return (
     <View style={styles.login}>
       <Text style={styles.banner}>{i18nString(Messages.Welcome)}</Text>
-      <TextInput
-        placeholder={i18nString(Messages.Email)}
-        value={email}
-        onChangeText={handleEmailChange}
-        inputMode="email"
-      />
-      <TextInput
-        placeholder={i18nString(Messages.Password)}
-        value={password}
-        onChangeText={handlePasswordChange}
-      />
-      <Button onPress={handleLogin}>{i18nString(Messages.Login)}</Button>
+      <View style={styles.loginField}>
+        <TextInput
+          placeholder={i18nString(Messages.Email)}
+          value={email}
+          onChangeText={handleEmailChange}
+          inputMode="email"
+        />
+        <TextInput
+          placeholder={i18nString(Messages.Password)}
+          value={password}
+          onChangeText={handlePasswordChange}
+        />
+        <Button onPress={handleLogin}>{i18nString(Messages.Login)}</Button>
+      </View>
     </View>
   );
 };

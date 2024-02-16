@@ -6,10 +6,12 @@ import TextInput from '@mobile/common/textinput/TextInput';
 import type { Exercise } from '@mobile/types/exercises';
 
 const styles = StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+  configureWorkout: {
+    display: 'flex',
+    height: '100%',
     justifyContent: 'center',
+    margin: 12,
+    gap: 12,
   },
 });
 
@@ -31,17 +33,15 @@ const ConfigureWorkout = ({
   };
 
   return (
-    <View>
+    <View style={styles.configureWorkout}>
       <TextInput
         placeholder={i18nString(Messages.EnterWorkoutName)}
         value={workoutName}
         onChangeText={handleWorkoutNameChange}
       />
-      <View style={styles.row}>
-        <Button onPress={startWorkout}>
-          {i18nString(Messages.StartWorkout)}
-        </Button>
-      </View>
+      <Button onPress={startWorkout}>
+        {i18nString(Messages.StartWorkout)}
+      </Button>
     </View>
   );
 };
