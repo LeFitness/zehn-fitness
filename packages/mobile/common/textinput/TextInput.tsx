@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     color: colors.white,
-    backgroundColor: colors.palette.primary,
-    borderColor: colors.palette.secondary,
+    backgroundColor: colors.primary,
+    borderColor: colors.secondary,
   },
 });
 

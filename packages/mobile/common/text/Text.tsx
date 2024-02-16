@@ -27,7 +27,7 @@ const Text = ({
       style={{
         ...styles.text,
         ...style,
-        color: type === 'primary' ? colors.white : colors.palette.secondary,
+        color: type === 'primary' ? colors.white : colors.secondary,
       }}
       {...props}>
       {children}

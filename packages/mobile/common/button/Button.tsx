@@ -29,10 +29,7 @@ const Button = ({
     <Pressable
       style={{
         ...styles.button,
-        backgroundColor:
-          type === 'primary'
-            ? colors.palette.primary
-            : colors.palette.secondary,
+        backgroundColor: type === 'primary' ? colors.primary : colors.secondary,
       }}
       onPress={onPress}
       {...props}>

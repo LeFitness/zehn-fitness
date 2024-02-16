@@ -15,8 +15,8 @@ const BottomTabs = (): React.JSX.Element => {
     <NavStack.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarStyle: { backgroundColor: colors.palette.secondary },
-        headerStyle: { backgroundColor: colors.palette.secondary },
+        tabBarStyle: { backgroundColor: colors.secondary },
+        headerStyle: { backgroundColor: colors.secondary },
         headerTitleStyle: { color: colors.white },
       }}>
       <NavStack.Screen
