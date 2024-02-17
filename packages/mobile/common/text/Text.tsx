@@ -6,7 +6,12 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     letterSpacing: 0.25,
-    zIndex: 100,
+  },
+  primary: {
+    color: colors.white,
+  },
+  secondary: {
+    color: colors.secondary,
   },
 });
 
@@ -24,11 +29,19 @@ const Text = ({
 }: TextProps): React.JSX.Element => {
   return (
     <RNText
-      style={{
-        ...styles.text,
-        ...style,
-        color: type === 'primary' ? colors.white : colors.secondary,
-      }}
+      style={
+        type === 'primary'
+          ? {
+              ...styles.text,
+              ...styles.primary,
+              ...style,
+            }
+          : {
+              ...styles.text,
+              ...styles.secondary,
+              ...style,
+            }
+      }
       {...props}>
       {children}
     </RNText>

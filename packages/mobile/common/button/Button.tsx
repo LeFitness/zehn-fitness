@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable, StyleSheet } from 'react-native';
+import { Pressable, StyleSheet, ViewStyle } from 'react-native';
 import Text from '@mobile/common/text/Text';
 import { colors } from '@mobile/theme/colors';
 
@@ -26,12 +26,14 @@ interface ButtonProps {
   type?: 'primary' | 'secondary';
   children: React.ReactNode;
   onPress: () => void;
+  style?: ViewStyle;
 }
 
 const Button = ({
   type = 'primary',
   children,
   onPress,
+  style,
   ...props
 }: ButtonProps): React.JSX.Element => {
   return (
@@ -41,10 +43,12 @@ const Button = ({
           ? {
               ...styles.button,
               ...styles.primary,
+              ...style,
             }
           : {
               ...styles.button,
               ...styles.secondary,
+              ...style,
             }
       }
       onPress={onPress}
