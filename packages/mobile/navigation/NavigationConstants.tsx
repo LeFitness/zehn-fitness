@@ -1,7 +1,11 @@
 export type RootStackParamList = {
-  Index: undefined;
+  Login: undefined;
+  BottomTabs: undefined;
+};
+
+export type BottomTabsStackList = {
   Home: undefined;
   CreateWorkout: undefined;
   ExerciseList: undefined;
-  BottomTabs: undefined;
+  Profile: undefined;
 };

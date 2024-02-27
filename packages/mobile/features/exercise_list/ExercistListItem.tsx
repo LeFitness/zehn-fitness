@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
+import Text from '@mobile/common/text/Text';
 import type { Exercise } from '@mobile/types/exercises';
 
 const styles = StyleSheet.create({
