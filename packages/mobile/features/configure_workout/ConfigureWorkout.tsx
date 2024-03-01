@@ -4,6 +4,11 @@ import i18nString, { Messages } from '@common/i18n';
 import Button from '@mobile/common/button/Button';
 import TextInput from '@mobile/common/textinput/TextInput';
 import type { Exercise } from '@mobile/types/exercises';
+import { defineMessages, useIntl, FormattedMessage } from 'react-intl';
+
+const messages = defineMessages({
+  startWorkout: { defaultMessage: 'Start Workout' },
+});
 
 const styles = StyleSheet.create({
   configureWorkout: {
@@ -23,6 +28,7 @@ const ConfigureWorkout = ({
   setCurrentWorkout,
 }: ConfigureWorkoutProps): React.JSX.Element => {
   const [workoutName, setWorkoutName] = useState('');
+  const intl = useIntl();
 
   const handleWorkoutNameChange = (text: string) => {
     setWorkoutName(text);
@@ -40,7 +46,8 @@ const ConfigureWorkout = ({
         onChangeText={handleWorkoutNameChange}
       />
       <Button onPress={startWorkout}>
-        {i18nString(Messages.StartWorkout)}
+        {intl.formatMessage(messages.startWorkout)}
+        {/* <FormattedMessage id={messages.startWorkout.defaultMessage} /> */}
       </Button>
     </View>
   );

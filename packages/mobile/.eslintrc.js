@@ -1,7 +1,9 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    node: true,
+    jest: true,
+    es6: true,
   },
   extends: [
     'eslint:recommended',
@@ -21,10 +23,13 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 6,
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  plugins: ['@typescript-eslint', 'react', 'import'],
+  plugins: ['@typescript-eslint', 'react', 'import', 'formatjs'],
   ignorePatterns: [
     'metro.config.js',
     'babel.config.js',
@@ -33,6 +38,7 @@ module.exports = {
   ],
   rules: {
     indent: ['error', 2],
+    'formatjs/no-offset': 'error',
     offsetTernaryExpressions: true,
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],

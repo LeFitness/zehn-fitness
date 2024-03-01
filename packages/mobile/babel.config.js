@@ -19,5 +19,13 @@ module.exports = {
         alias: getAliasesFromTsConfig(),
       },
     ],
+    [
+      'formatjs',
+      {
+        idInterpolationPattern: '[sha512:contenthash:base64:6]',
+        ast: true,
+      },
+    ],
+    ['react-intl-auto'],
   ],
 };
