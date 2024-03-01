@@ -18,23 +18,17 @@ const appTheme = {
   },
 };
 
-interface StructuredMessage {
-  context?: string;
-  string: string;
+interface IntlStructure {
+  defaultMessage: string;
 }
 
-type MessagesType = Record<string, StructuredMessage> | undefined;
-
-// interface AppProps {
-//   messages: MessagesType;
-//   locale: AvailableLocale;
-// }
+type MessagesType = Record<string, IntlStructure> | undefined;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const loadLocaleData = (locale: AvailableLocale): Promise<any> => {
   switch (locale) {
-    case 'en':
-      return import('./i18n/locale/en.json');
+    case 'es':
+      return import('./i18n/locale/es.json');
     default:
       return import('./i18n/locale/en.json');
   }
@@ -49,8 +43,6 @@ const App = (): React.JSX.Element => {
   const [loadedMessages, setMessages] = useState<MessagesType>(undefined);
   const [currentLocale, setLocale] = useState<AvailableLocale>(locale);
 
-  const dotSeparator = '_dot_';
-  const sepRegExp = new RegExp(dotSeparator, 'g');
   const getKeyValueJson = (
     messages: MessagesType,
   ): Record<string, string> | undefined => {
@@ -58,18 +50,15 @@ const App = (): React.JSX.Element => {
       return;
     }
 
-    const keyValueMessages: Record<string, string> = {};
-    return Object.entries(messages).reduce((acc, [id, msg]) => {
-      acc[id.replace(sepRegExp, '.')] = msg.string;
+    return Object.entries(messages).reduce((acc, [id, key]) => {
+      acc[id.replace(/_dot_/g, '.')] = key.defaultMessage;
       return acc;
-    }, keyValueMessages);
+    }, {} as Record<string, string>);
   };
 
   useEffect(() => {
     loadLocaleData(currentLocale).then(setMessages);
   }, [currentLocale]);
-
-  console.log({ locale, loadedMessages });
 
   return (
     <LanguageContext.Provider value={{ locale: currentLocale, setLocale }}>
