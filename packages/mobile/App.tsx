@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { IntlProvider } from 'react-intl';
 import { LanguageContext } from '@mobile/context/LanguageContext';
 import type { AvailableLocale } from '@mobile/context/LanguageContext';
+import SplashScreen from 'react-native-splash-screen';
 
 const appTheme = {
   ...DefaultTheme,
@@ -34,38 +35,54 @@ const loadLocaleData = (locale: AvailableLocale): Promise<any> => {
   }
 };
 
-const App = (): React.JSX.Element => {
+const App = () => {
   const RootStack = createNativeStackNavigator<RootStackParamList>();
   const isAuthenticated = useAppStore(state => state.authToken);
 
   // Defaulting this to english for now
-  const locale = 'en';
+  const locale = 'es';
+
   const [loadedMessages, setMessages] = useState<MessagesType>(undefined);
   const [currentLocale, setLocale] = useState<AvailableLocale>(locale);
+  const [loading, setLoading] = useState<boolean>(true); // Added loading state
 
-  const getKeyValueJson = (
+  const getKeyValueOfJson = (
     messages: MessagesType,
   ): Record<string, string> | undefined => {
     if (!messages) {
       return;
     }
 
-    return Object.entries(messages).reduce((acc, [id, key]) => {
-      acc[id.replace(/_dot_/g, '.')] = key.defaultMessage;
-      return acc;
+    return Object.entries(messages).reduce((messages, [id, key]) => {
+      messages[id.replace(/_dot_/g, '.')] = key.defaultMessage;
+      return messages;
     }, {} as Record<string, string>);
   };
 
+  const hideSplashScreen = () => {
+    SplashScreen.hide();
+    setLoading(false);
+  };
+
   useEffect(() => {
-    loadLocaleData(currentLocale).then(setMessages);
+    setLoading(true);
+    SplashScreen.show();
+
+    loadLocaleData(currentLocale)
+      .then(data => setMessages(data.default))
+      .finally(() => hideSplashScreen());
   }, [currentLocale]);
+
+  if (loading) {
+    return null;
+  }
 
   return (
     <LanguageContext.Provider value={{ locale: currentLocale, setLocale }}>
       <IntlProvider
         locale={currentLocale}
         defaultLocale="en"
-        messages={getKeyValueJson(loadedMessages)}>
+        messages={getKeyValueOfJson(loadedMessages)}>
         <NavigationContainer theme={appTheme}>
           <RootStack.Navigator
             initialRouteName={isAuthenticated ? 'BottomTabs' : 'Login'}

@@ -1,11 +1,30 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import i18nString, { Messages } from '@common/i18n';
 import Button from '@mobile/common/button/Button';
 import Text from '@mobile/common/text/Text';
 import TextInput from '@mobile/common/textinput/TextInput';
 import { LoginNavigationProp } from '@mobile/features/login/LoginScreen';
 import useAppStore from '@mobile/stores/useAppStore';
+import { defineMessages, useIntl } from 'react-intl';
+
+const messages = defineMessages({
+  welcome: {
+    id: 'app.login.welcome',
+    defaultMessage: 'Welcome',
+  },
+  email: {
+    id: 'app.login.email',
+    defaultMessage: 'Email',
+  },
+  password: {
+    id: 'app.login.password',
+    defaultMessage: 'Password',
+  },
+  login: {
+    id: 'app.login.loginText',
+    defaultMessage: 'Login',
+  },
+});
 
 const styles = StyleSheet.create({
   login: {
@@ -31,6 +50,8 @@ interface LoginProps {
 }
 
 const Login = ({ setAuthToken }: LoginProps): React.JSX.Element => {
+  const intl = useIntl();
+
   const handleLogin = () => {
     setAuthToken('123456789');
   };
@@ -48,20 +69,22 @@ const Login = ({ setAuthToken }: LoginProps): React.JSX.Element => {
 
   return (
     <View style={styles.login}>
-      <Text style={styles.banner}>{i18nString(Messages.Welcome)}</Text>
+      <Text style={styles.banner}>{intl.formatMessage(messages.welcome)}</Text>
       <View style={styles.loginField}>
         <TextInput
-          placeholder={i18nString(Messages.Email)}
+          placeholder={intl.formatMessage(messages.email)}
           value={email}
           onChangeText={handleEmailChange}
           inputMode="email"
         />
         <TextInput
-          placeholder={i18nString(Messages.Password)}
+          placeholder={intl.formatMessage(messages.password)}
           value={password}
           onChangeText={handlePasswordChange}
         />
-        <Button onPress={handleLogin}>{i18nString(Messages.Login)}</Button>
+        <Button onPress={handleLogin}>
+          {intl.formatMessage(messages.login)}
+        </Button>
       </View>
     </View>
   );
