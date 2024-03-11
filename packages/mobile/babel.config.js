@@ -26,6 +26,5 @@ module.exports = {
         ast: true,
       },
     ],
-    ['react-intl-auto'],
   ],
 };

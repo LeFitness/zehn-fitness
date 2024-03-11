@@ -25,7 +25,6 @@ interface IntlStructure {
 
 type MessagesType = Record<string, IntlStructure> | undefined;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const loadLocaleData = (locale: AvailableLocale): Promise<any> => {
   switch (locale) {
     case 'es':
@@ -40,11 +39,11 @@ const App = () => {
   const isAuthenticated = useAppStore(state => state.authToken);
 
   // Defaulting this to english for now
-  const locale = 'es';
+  const locale = 'en';
 
   const [loadedMessages, setMessages] = useState<MessagesType>(undefined);
   const [currentLocale, setLocale] = useState<AvailableLocale>(locale);
-  const [loading, setLoading] = useState<boolean>(true); // Added loading state
+  const [loading, setLoading] = useState<boolean>(false); // Added loading state
 
   const getKeyValueOfJson = (
     messages: MessagesType,
@@ -53,27 +52,26 @@ const App = () => {
       return;
     }
 
-    return Object.entries(messages).reduce((messages, [id, key]) => {
-      messages[id.replace(/_dot_/g, '.')] = key.defaultMessage;
+    return Object.entries(messages).reduce((messages, [id, message]) => {
+      messages[id] = message.defaultMessage;
       return messages;
     }, {} as Record<string, string>);
   };
 
   const hideSplashScreen = () => {
-    SplashScreen.hide();
     setLoading(false);
+    SplashScreen.hide();
   };
 
   useEffect(() => {
     setLoading(true);
-    SplashScreen.show();
 
-    loadLocaleData(currentLocale)
-      .then(data => setMessages(data.default))
+    loadLocaleData(locale)
+      .then(setMessages)
       .finally(() => hideSplashScreen());
-  }, [currentLocale]);
+  }, [locale]);
 
-  if (loading) {
+  if (loading || !loadedMessages) {
     return null;
   }
 

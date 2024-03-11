@@ -1,9 +1,9 @@
 {
-  "app.configureWorkout.startButton": {
-    "defaultMessage": "Empezar a Entrenar"
-  },
   "app.configureWorkout.enterWorkoutName": {
     "defaultMessage": "Ingrese el nombre del entrenamiento"
+  },
+  "app.configureWorkout.startButton": {
+    "defaultMessage": "Empezar a Entrenar"
   },
   "app.global.idle": {
     "defaultMessage": "Inactiva"
