@@ -1,9 +1,16 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import i18nString, { Messages } from '@common/i18n';
 import Button from '@mobile/common/button/Button';
 import { ProfileNavigationProp } from '@mobile/features/profile/ProfileScreen';
 import useAppStore from '@mobile/stores/useAppStore';
+import { defineMessages, useIntl } from 'react-intl';
+
+const messages = defineMessages({
+  signOut: {
+    id: 'app.profile.signOut',
+    defaultMessage: 'Sign Out',
+  },
+});
 
 const styles = StyleSheet.create({
   root: {
@@ -21,13 +28,17 @@ interface ProfileProps {
 }
 
 const Profile = ({ resetAuth }: ProfileProps): React.JSX.Element => {
+  const intl = useIntl();
+
   const handleLogout = () => {
     resetAuth();
   };
 
   return (
     <View style={styles.root}>
-      <Button onPress={handleLogout}>{i18nString(Messages.SignOut)}</Button>
+      <Button onPress={handleLogout}>
+        {intl.formatMessage(messages.signOut)}
+      </Button>
     </View>
   );
 };

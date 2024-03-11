@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import i18nString, { Messages } from '@common/i18n';
 import Button from '@mobile/common/button/Button';
 import TextInput from '@mobile/common/textinput/TextInput';
 import type { Exercise } from '@mobile/types/exercises';
+import { defineMessages, useIntl } from 'react-intl';
+
+const messages = defineMessages({
+  startWorkout: {
+    id: 'app.configureWorkout.startButton',
+    defaultMessage: 'Start Workout',
+  },
+  enterWorkoutName: {
+    id: 'app.configureWorkout.enterWorkoutName',
+    defaultMessage: 'Enter workout name',
+  },
+});
 
 const styles = StyleSheet.create({
   configureWorkout: {
@@ -23,6 +34,7 @@ const ConfigureWorkout = ({
   setCurrentWorkout,
 }: ConfigureWorkoutProps): React.JSX.Element => {
   const [workoutName, setWorkoutName] = useState('');
+  const intl = useIntl();
 
   const handleWorkoutNameChange = (text: string) => {
     setWorkoutName(text);
@@ -35,12 +47,13 @@ const ConfigureWorkout = ({
   return (
     <View style={styles.configureWorkout}>
       <TextInput
-        placeholder={i18nString(Messages.EnterWorkoutName)}
+        placeholder={intl.formatMessage(messages.enterWorkoutName)}
         value={workoutName}
         onChangeText={handleWorkoutNameChange}
       />
       <Button onPress={startWorkout}>
-        {i18nString(Messages.StartWorkout)}
+        {intl.formatMessage(messages.startWorkout)}
+        {/* <FormattedMessage id={messages.startWorkout.defaultMessage} /> */}
       </Button>
     </View>
   );

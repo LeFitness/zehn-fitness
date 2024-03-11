@@ -1,0 +1,26 @@
+{
+  "app.configureWorkout.enterWorkoutName": {
+    "defaultMessage": "Enter workout name"
+  },
+  "app.configureWorkout.startButton": {
+    "defaultMessage": "Start Workout"
+  },
+  "app.global.idle": {
+    "defaultMessage": "Idle"
+  },
+  "app.login.email": {
+    "defaultMessage": "Email"
+  },
+  "app.login.loginText": {
+    "defaultMessage": "Login"
+  },
+  "app.login.password": {
+    "defaultMessage": "Password"
+  },
+  "app.login.welcome": {
+    "defaultMessage": "Welcome"
+  },
+  "app.profile.signOut": {
+    "defaultMessage": "Sign Out"
+  }
+}
