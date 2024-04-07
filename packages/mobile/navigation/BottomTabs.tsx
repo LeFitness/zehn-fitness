@@ -1,5 +1,5 @@
 import React from 'react';
-import CreateWorkout from '@mobile/features/configure_workout/CreateWorkoutScreen';
+import CreateWorkout from '@mobile/features/create_workout/CreateWorkoutScreen';
 import ExerciseList from '@mobile/features/exercise_list/ExerciseListScreen';
 import Home from '@mobile/features/home/HomeScreen';
 import Profile from '@mobile/features/profile/ProfileScreen';

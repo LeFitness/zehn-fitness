@@ -8,6 +8,8 @@ export interface WorkoutSlice {
   startWorkout: (exercise: Exercise) => void;
   completeWorkout: () => void;
   resetWorkout: () => void;
+  setWorkoutTime: (workoutTime: number) => void;
+  workoutTime: number;
 }
 
 export const createWorkoutSlice: StateCreator<
@@ -35,5 +37,7 @@ export const createWorkoutSlice: StateCreator<
 
       return state;
     }),
-  resetWorkout: () => set({ currentWorkout: undefined }),
+  resetWorkout: () => set({ currentWorkout: undefined, workoutTime: 0 }),
+  setWorkoutTime: (workoutTime: number) => set({ workoutTime: workoutTime }),
+  workoutTime: 0,
 });
