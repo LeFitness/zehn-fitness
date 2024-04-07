@@ -9,19 +9,15 @@ import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
   welcome: {
-    id: 'app.login.welcome',
     defaultMessage: 'Welcome',
   },
   email: {
-    id: 'app.login.email',
     defaultMessage: 'Email',
   },
   password: {
-    id: 'app.login.password',
     defaultMessage: 'Password',
   },
   login: {
-    id: 'app.login.loginText',
     defaultMessage: 'Login',
   },
 });

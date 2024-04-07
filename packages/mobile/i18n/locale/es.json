@@ -1,26 +1,26 @@
 {
-  "app.configureWorkout.enterWorkoutName": {
+  "I46hZe": {
     "defaultMessage": "Ingrese el nombre del entrenamiento"
   },
-  "app.configureWorkout.startButton": {
+  "nPKV9/": {
     "defaultMessage": "Empezar a Entrenar"
   },
-  "app.global.idle": {
+  "sNY4nx": {
     "defaultMessage": "Inactiva"
   },
-  "app.login.email": {
+  "sy+pv5": {
     "defaultMessage": "Correo electrónico"
   },
-  "app.login.loginText": {
+  "AyGauy": {
     "defaultMessage": "Acceso"
   },
-  "app.login.password": {
+  "5sg7KC": {
     "defaultMessage": "Contraseña"
   },
-  "app.login.welcome": {
+  "PwaN2o": {
     "defaultMessage": "Bienvenido"
   },
-  "app.profile.signOut": {
+  "F62y+K": {
     "defaultMessage": "Desconectar"
   }
 }

@@ -1,26 +1,26 @@
 {
-  "app.configureWorkout.enterWorkoutName": {
-    "defaultMessage": "Enter workout name"
-  },
-  "app.configureWorkout.startButton": {
-    "defaultMessage": "Start Workout"
-  },
-  "app.global.idle": {
-    "defaultMessage": "Idle"
-  },
-  "app.login.email": {
-    "defaultMessage": "Email"
-  },
-  "app.login.loginText": {
-    "defaultMessage": "Login"
-  },
-  "app.login.password": {
+  "5sg7KC": {
     "defaultMessage": "Password"
   },
-  "app.login.welcome": {
+  "AyGauy": {
+    "defaultMessage": "Login"
+  },
+  "F62y+K": {
+    "defaultMessage": "Sign Out"
+  },
+  "I46hZe": {
+    "defaultMessage": "Enter workout name"
+  },
+  "PwaN2o": {
     "defaultMessage": "Welcome"
   },
-  "app.profile.signOut": {
-    "defaultMessage": "Sign Out"
+  "nPKV9/": {
+    "defaultMessage": "Start Workout"
+  },
+  "sNY4nx": {
+    "defaultMessage": "Idle"
+  },
+  "sy+pv5": {
+    "defaultMessage": "Email"
   }
 }
