@@ -7,7 +7,6 @@ import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
   signOut: {
-    id: 'app.profile.signOut',
     defaultMessage: 'Sign Out',
   },
 });

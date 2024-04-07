@@ -7,11 +7,9 @@ import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
   startWorkout: {
-    id: 'app.configureWorkout.startButton',
     defaultMessage: 'Start Workout',
   },
   enterWorkoutName: {
-    id: 'app.configureWorkout.enterWorkoutName',
     defaultMessage: 'Enter workout name',
   },
 });
