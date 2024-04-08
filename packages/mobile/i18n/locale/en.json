@@ -1,4 +1,7 @@
 {
+  "2O2sfp": {
+    "defaultMessage": "Finish"
+  },
   "5sg7KC": {
     "defaultMessage": "Password"
   },
@@ -14,8 +17,17 @@
   "PwaN2o": {
     "defaultMessage": "Welcome"
   },
+  "ZLVbRg": {
+    "defaultMessage": "Cancel Workout"
+  },
+  "aGctuG": {
+    "defaultMessage": "Resume Workout"
+  },
   "nPKV9/": {
     "defaultMessage": "Start Workout"
+  },
+  "qm4ziJ": {
+    "defaultMessage": "Pause Workout"
   },
   "sNY4nx": {
     "defaultMessage": "Idle"

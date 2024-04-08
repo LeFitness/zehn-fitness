@@ -9,3 +9,8 @@ export type BottomTabsStackList = {
   ExerciseList: undefined;
   Profile: undefined;
 };
+
+export type CreateWorkoutStackList = {
+  CreateWorkout: undefined;
+  StartWorkout: undefined;
+};
