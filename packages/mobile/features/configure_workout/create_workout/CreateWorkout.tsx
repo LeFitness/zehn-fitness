@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import Button from '@mobile/common/button/Button';
 import { defineMessages, useIntl } from 'react-intl';
 import type { WorkoutSlice } from '@mobile/stores/workoutSlice';
-import { CreateWorkoutNavigationProp } from '@mobile/features/create_workout/CreateWorkoutScreen';
+import { CreateWorkoutNavigationProp } from '@mobile/features/configure_workout/create_workout/CreateWorkoutScreen';
 
 const messages = defineMessages({
   startWorkout: {

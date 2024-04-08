@@ -5,7 +5,7 @@ export type RootStackParamList = {
 
 export type BottomTabsStackList = {
   Home: undefined;
-  CreateWorkout: undefined;
+  ConfigureWorkout: undefined;
   ExerciseList: undefined;
   Profile: undefined;
 };

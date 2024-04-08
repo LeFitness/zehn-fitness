@@ -1,5 +1,5 @@
 import React from 'react';
-import CreateWorkout from '@mobile/features/create_workout/CreateWorkout';
+import CreateWorkout from '@mobile/features/configure_workout/create_workout/CreateWorkout';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { CreateWorkoutStackList } from '@mobile/navigation/NavigationConstants';
 

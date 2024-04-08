@@ -6,7 +6,7 @@ import Text from '@mobile/common/text/Text';
 import { defineMessages, useIntl } from 'react-intl';
 import useAppStore from '@mobile/stores/useAppStore';
 import type { WorkoutSlice } from '@mobile/stores/workoutSlice';
-import { StartWorkoutNavigationProp } from '@mobile/features/start_workout/StartWorkoutScreen';
+import { StartWorkoutNavigationProp } from '@mobile/features/configure_workout/start_workout/StartWorkoutScreen';
 
 const messages = defineMessages({
   finishWorkout: {
