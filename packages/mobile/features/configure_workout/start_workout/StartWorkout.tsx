@@ -7,6 +7,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import useAppStore from '@mobile/stores/useAppStore';
 import type { WorkoutSlice } from '@mobile/stores/workoutSlice';
 import { StartWorkoutNavigationProp } from '@mobile/features/configure_workout/start_workout/StartWorkoutScreen';
+import { colors } from '@mobile/theme/colors';
 
 const messages = defineMessages({
   finishWorkout: {
@@ -60,16 +61,12 @@ const StartWorkout = ({
   const intl = useIntl();
   const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
   const [workoutIsActive, setWorkoutIsActive] = useState(true);
-  const {
-    startWorkout: setCurrentWorkout,
-    currentWorkout,
-    setWorkoutTime: setCurrentWorkoutTime,
-    workoutTime: currentWorkoutTime,
-  } = workoutSlice;
+  const [workoutTime, setWorkoutTime] = useState(0);
+  const { startWorkout: setCurrentWorkout, currentWorkout } = workoutSlice;
   const currentWorkoutName = currentWorkout?.name ?? '';
 
   const handleWorkoutNameChange = (text: string) => {
-    setCurrentWorkout({ id: 1, name: text });
+    setCurrentWorkout({ id: 1, name: text, timeElapsed: workoutTime });
   };
 
   const finishWorkout = () => {
@@ -106,8 +103,8 @@ const StartWorkout = ({
   useEffect(() => {
     if (workoutIsActive) {
       intervalRef.current = setInterval(() => {
-        const secondsElapsed = currentWorkoutTime + 1;
-        setCurrentWorkoutTime(secondsElapsed);
+        const secondsElapsed = workoutTime + 1;
+        setWorkoutTime(secondsElapsed);
       }, 1000);
     } else {
       if (intervalRef.current) {
@@ -120,13 +117,15 @@ const StartWorkout = ({
         clearInterval(intervalRef.current);
       }
     };
-  }, [workoutIsActive, currentWorkoutTime]);
+  }, [workoutIsActive, workoutTime]);
 
   return (
     <View style={styles.StartWorkout}>
       <View style={styles.topRow}>
-        <Text>{formatTime(currentWorkoutTime)}</Text>
-        <Button onPress={finishWorkout}>
+        <Text>{formatTime(workoutTime)}</Text>
+        <Button
+          style={{ backgroundColor: colors.success }}
+          onPress={finishWorkout}>
           {intl.formatMessage(messages.finishWorkout)}
         </Button>
       </View>
@@ -136,12 +135,16 @@ const StartWorkout = ({
           value={currentWorkoutName}
           onChangeText={handleWorkoutNameChange}
         />
-        <Button onPress={pauseWorkout}>
+        <Button
+          style={{ backgroundColor: colors.palette.cyan['700'] }}
+          onPress={pauseWorkout}>
           {workoutIsActive
             ? intl.formatMessage(messages.pauseWorkout)
             : intl.formatMessage(messages.resumeWorkout)}
         </Button>
-        <Button onPress={clearWorkout}>
+        <Button
+          style={{ backgroundColor: colors.danger }}
+          onPress={clearWorkout}>
           {intl.formatMessage(messages.cancelWorkout)}
         </Button>
       </View>

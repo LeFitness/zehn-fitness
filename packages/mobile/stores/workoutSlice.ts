@@ -1,15 +1,13 @@
-import type { Exercise } from '@mobile/types/exercises';
+import type { Exercise, Workout } from '@mobile/types/exercises';
 import { StateCreator } from 'zustand';
 
 export interface WorkoutSlice {
-  currentWorkout: Exercise | undefined;
-  completedWorkouts: Exercise[];
+  currentWorkout: Workout | undefined;
+  completedWorkouts: Workout[];
   exercises: Exercise[];
-  startWorkout: (exercise: Exercise) => void;
+  startWorkout: (workout: Workout) => void;
   completeWorkout: () => void;
   resetWorkout: () => void;
-  setWorkoutTime: (workoutTime: number) => void;
-  workoutTime: number;
 }
 
 export const createWorkoutSlice: StateCreator<
@@ -25,7 +23,7 @@ export const createWorkoutSlice: StateCreator<
     { id: 2, name: 'Squat' },
     { id: 3, name: 'Deadlift' },
   ],
-  startWorkout: (exercise: Exercise) => set({ currentWorkout: exercise }),
+  startWorkout: (workout: Workout) => set({ currentWorkout: workout }),
   completeWorkout: () =>
     set(state => {
       if (state.currentWorkout) {
@@ -37,7 +35,5 @@ export const createWorkoutSlice: StateCreator<
 
       return state;
     }),
-  resetWorkout: () => set({ currentWorkout: undefined, workoutTime: 0 }),
-  setWorkoutTime: (workoutTime: number) => set({ workoutTime: workoutTime }),
-  workoutTime: 0,
+  resetWorkout: () => set({ currentWorkout: undefined }),
 });
